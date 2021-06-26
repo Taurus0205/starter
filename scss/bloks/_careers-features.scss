@@ -1,0 +1,143 @@
+.careers-features {
+}
+
+.careers-features .container {
+  margin-top: 120px;
+  margin-bottom: 69px;
+  overflow: hidden;
+}
+.careers-features__list {
+  @include reset-list;
+}
+
+.careers-features__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.careers-features__item-wrapper {
+  @include mwidth(445px);
+}
+
+.careers-features__heading {
+  @include marbot(24px);
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.14286px;
+  color: #495567;
+}
+
+.careers-features__paragraph {
+  @include marbot(40px);
+  font-family: Lexend Deca, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #939caa;
+}
+
+.careers-features__link {
+  @include yelbutton;
+}
+
+.careers-features__span {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    z-index: 5;
+    display: inline-block;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: 0px;
+    display: inline-block;
+    width: 445px;
+    height: 445px;
+    background-color: #e5ecf4;
+    border-radius: 50%;
+    content: "";
+  }
+}
+
+.careers-join {
+  &::before {
+    bottom: 0px;
+    left: -130px;
+    width: 740px;
+    height: 100%;
+    max-height: 155px;
+    background-image: url(../images/features-part/left-bottom-vector.svg);
+    background-position: left;
+    background-size: contain;
+  }
+
+  &::after {
+    left: 509px;
+  }
+}
+
+.careers-features__img {
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 1091px) {
+  .careers-features .container {
+    margin-top: 144px;
+    margin-bottom: 80px;
+  }
+
+  .careers-features__item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .careers-features__heading {
+    margin-bottom: 40px;
+  }
+
+  .careers-features__span {
+    margin-bottom: 56px;
+    order: -1;
+  }
+}
+
+@media only screen and (max-width: 718px) {
+  .careers-features .container {
+    margin-top: 72px;
+  }
+
+  .careers-features .container-small {
+    padding: 10px;
+  }
+
+  .careers-features__heading {
+    margin-bottom: 32px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .careers-features__span {
+    width: 311px;
+    height: 311px;
+    &::after {
+      width: 311px;
+      height: 311px;
+    }
+  }
+
+  .careers-join {
+    &::before {
+      bottom: 0px;
+      left: 0px;
+    }
+  }
+}

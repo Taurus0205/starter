@@ -1,0 +1,141 @@
+.faqs {
+  margin-bottom: 160px;
+}
+
+.faqs__heading {
+  @include marbot(64px);
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: -2.14286px;
+  color: #495567;
+}
+
+.faqs__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+
+.faqs__wrapper__heading {
+  @include marbot(0);
+  margin-right: 20px;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -1.78571px;
+  color: #495567;
+}
+
+.faqs__list {
+  @include reset-list;
+  @include mwidth(730px);
+}
+
+.faqs__item {
+  width: 100%;
+}
+
+.faqs__item + .faqs__item {
+  margin-top: 16px;
+}
+
+.faqs__btn {
+  width: 100%;
+  text-align: left;
+  padding: 32px 40px;
+  border: none;
+  background-color: #f2f5f9;
+  cursor: pointer;
+}
+
+.faqs__btn-name {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07143px;
+  color: #495567;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 16px;
+    height: 8px;
+    background-image: url(../images/up-down-vector.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+  }
+}
+
+.faqs__btn-text {
+  display: none;
+  margin-top: 24px;
+  font-family: Lexend Deca, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: #495567;
+}
+
+// active uchun
+.faqs__item--active .faqs__btn-text {
+  display: block;
+}
+
+.faqs__item--active .faqs__btn-name::after {
+  transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 1103px) {
+  .faqs__list {
+    @include mwidth(689px);
+  }
+}
+
+@media only screen and (max-width: 1061px) {
+  .faqs {
+    margin-bottom: 120px;
+  }
+
+  .faqs .container-small {
+    padding: 0 32px;
+  }
+
+  .faqs__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .faqs__wrapper__heading {
+    margin-right: 0px;
+    margin-bottom: 32px;
+  }
+}
+
+@media only screen and (max-width: 455px) {
+  .faqs__heading {
+    margin-bottom: 48px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .faqs__wrapper__heading {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .faqs__btn-name {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
